@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haris Fragrance | Premium Pakistani Perfume Brand</title>
+    <meta name="description" content="Discover luxury fragrances at Haris Fragrance - premium Pakistani perfume brand offering Eau de Parfum, Attar, Oud Collections, Oriental Blends and Gift Sets.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#0D0A07',
+              'brand-bg-secondary': '#1A1410',
+              'brand-card': '#211A13',
+              'brand-gold': '#C9A84C',
+              'brand-gold-light': '#E8C97A',
+              'brand-gold-muted': '#8B7340',
+              'brand-cream': '#F2EAD8',
+              'brand-muted': '#A89880',
+              'brand-rose': '#8C3A50',
+              'cat-edp': '#C9A84C',
+              'cat-attar': '#8C6A3F',
+              'cat-oud': '#5C3D2E',
+              'cat-oriental': '#8C3A50',
+              'cat-giftsets': '#4A6741',
+            },
+            fontFamily: {
+              'cinzel': ['Cinzel', 'serif'],
+              'cormorant': ['Cormorant Garamond', 'serif'],
+              'jost': ['Jost', 'sans-serif'],
+              'dancing': ['Dancing Script', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        --color-bg-primary: #0D0A07;
+        --color-bg-secondary: #1A1410;
+        --color-bg-card: #211A13;
+        --color-gold-primary: #C9A84C;
+        --color-gold-light: #E8C97A;
+        --color-gold-muted: #8B7340;
+        --color-cream: #F2EAD8;
+        --color-cream-muted: #A89880;
+        --color-rose-accent: #8C3A50;
+        --cat-edp: #C9A84C;
+        --cat-attar: #8C6A3F;
+        --cat-oud: #5C3D2E;
+        --cat-oriental: #8C3A50;
+        --cat-giftsets: #4A6741;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Jost', sans-serif;
+        background-color: #0D0A07;
+        color: #F2EAD8;
+        overflow-x: hidden;
+      }
+
+      .glass {
+        background: rgba(13, 10, 7, 0.9);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+
+      .shimmer {
+        background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.4), transparent);
+        background-size: 200% 100%;
+        animation: shimmer 3s infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #C9A84C;
+        border-radius: 50%;
+        animation: float 8s infinite ease-in-out;
+      }
+
+      @keyframes letterReveal {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .letter-animate {
+        opacity: 0;
+        display: inline-block;
+        animation: letterReveal 0.5s forwards;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .fade-up {
+        opacity: 0;
+        animation: fadeUp 0.8s forwards;
+      }
+
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+      }
+
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+        50% { box-shadow: 0 0 0 15px rgba(201, 168, 76, 0); }
+      }
+
+      .pulse-animate {
+        animation: pulse 2s infinite;
+      }
+
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(201, 168, 76, 0.2);
+      }
+
+      .product-card:hover .product-image {
+        transform: scale(1.08);
+      }
+
+      .product-image {
+        transition: transform 0.5s ease;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #C9A84C;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      @keyframes fadeOut {
+        from { opacity: 1; transform: scale(1); }
+        to { opacity: 0; transform: scale(0.95); }
+      }
+
+      .fade-out {
+        animation: fadeOut 0.3s forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.4s forwards;
+      }
+
+      .modal-overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+      }
+
+      .modal-content {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all 0.4s ease;
+      }
+
+      .modal-overlay.active .modal-content {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .stagger-1 { animation-delay: 0.1s; }
+      .stagger-2 { animation-delay: 0.2s; }
+      .stagger-3 { animation-delay: 0.3s; }
+      .stagger-4 { animation-delay: 0.4s; }
+      .stagger-5 { animation-delay: 0.5s; }
+      .stagger-6 { animation-delay: 0.6s; }
+
+      img {
+        object-fit: cover;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1A1410;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #C9A84C;
+        border-radius: 4px;
+      }
+
+      .category-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .category-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        transition: border-color 0.3s ease;
+      }
+
+      .category-card:hover::after {
+        border-color: var(--cat-color, #C9A84C);
+      }
+
+      .hero-overlay {
+        background: linear-gradient(180deg,
+          rgba(13, 10, 7, 0.3) 0%,
+          rgba(13, 10, 7, 0.6) 50%,
+          rgba(13, 10, 7, 0.95) 100%);
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+        background: #25D366;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+      }
+
+      .gold-border-corner {
+        position: relative;
+        padding: 15px;
+      }
+
+      .gold-border-corner::before,
+      .gold-border-corner::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #C9A84C;
+      }
+
+      .gold-border-corner::before {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .gold-border-corner::after {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+      }
+
+      .section-heading {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .section-heading.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .star-filled { color: #C9A84C; }
+      .star-empty { color: #8B7340; }
+
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      .qty-btn {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #C9A84C;
+        background: transparent;
+        color: #C9A84C;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .qty-btn:hover {
+        background: #C9A84C;
+        color: #0D0A07;
+      }
+
+      .screen-content {
+        display: none;
+      }
+
+      .screen-content.active {
+        display: block;
+        animation: fadeUp 0.4s ease;
+      }
+
+      .filter-btn.active {
+        background-color: #C9A84C;
+        color: #0D0A07;
+        border-color: #C9A84C;
+      }
+    </style>
+  </head>
+  <body class="bg-brand-bg text-brand-cream">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <img src="logo.jpg" alt="Haris Fragrance" class="h-12 w-auto" onerror="this.src='https://placehold.co/48x48/C9A84C/0D0A07?text=HF'">
+          <span class="font-cinzel text-xl font-bold text-brand-gold">Haris Fragrance</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link text-brand-cream hover:text-brand-gold transition-colors">Home</a>
+          <a href="#story" class="nav-link text-brand-cream hover:text-brand-gold transition-colors">Our Story</a>
+          <a href="#collections" class="nav-link text-brand-cream hover:text-brand-gold transition-colors">Collections</a>
+          <a href="#products" class="nav-link text-brand-cream hover:text-brand-gold transition-colors">Shop</a>
+          <a href="#bestsellers" class="nav-link text-brand-cream hover:text-brand-gold transition-colors">Bestsellers</a>
+        </div>
+
+        <!-- Cart & CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <button class="relative p-2 text-brand-cream hover:text-brand-gold transition-colors">
+            <i class="ri-shopping-bag-3-line text-xl"></i>
+            <span id="cart-count" class="absolute -top-1 -right-1 bg-brand-gold text-brand-bg text-xs w-5 h-5 rounded-full flex items-center justify-center font-semibold">0</span>
+          </button>
+          <a href="https://wa.me/923001234567" target="_blank" class="px-5 py-2.5 bg-brand-gold text-brand-bg font-semibold rounded-full pulse-animate hover:bg-brand-gold-light transition-colors">
+            <i class="ri-whatsapp-line mr-2"></i>Order Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-brand-cream">
+          <i class="ri-menu-4-line text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-brand-bg flex flex-col items-center justify-center gap-8 md:hidden">
+      <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-brand-cream">
+        <i class="ri-close-line text-3xl"></i>
+      </button>
+      <a href="#home" class="font-cormorant text-2xl text-brand-cream hover:text-brand-gold">Home</a>
+      <a href="#story" class="font-cormorant text-2xl text-brand-cream hover:text-brand-gold">Our Story</a>
+      <a href="#collections" class="font-cormorant text-2xl text-brand-cream hover:text-brand-gold">Collections</a>
+      <a href="#products" class="font-cormorant text-2xl text-brand-cream hover:text-brand-gold">Shop</a>
+      <a href="#bestsellers" class="font-cormorant text-2xl text-brand-cream hover:text-brand-gold">Bestsellers</a>
+      <a href="https://wa.me/923001234567" target="_blank" class="px-8 py-3 bg-brand-gold text-brand-bg font-semibold rounded-full">
+        <i class="ri-whatsapp-line mr-2"></i>Order Now
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="laura-chouette-4sKdeIMiFEI-unsplash.jpg" alt="Luxury Perfume" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1920x1080/1A1410/C9A84C?text=Luxury+Perfume'">
+        <div class="hero-overlay absolute inset-0"></div>
+      </div>
+
+      <!-- Golden Particles -->
+      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+      <div class="particle" style="left: 35%; animation-delay: 4s;"></div>
+      <div class="particle" style="left: 50%; animation-delay: 1s;"></div>
+      <div class="particle" style="left: 65%; animation-delay: 3s;"></div>
+      <div class="particle" style="left: 80%; animation-delay: 5s;"></div>
+      <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <p class="font-dancing text-brand-gold-light text-2xl md:text-3xl mb-4 letter-animate" style="animation-delay: 0.2s;">Welcome to</p>
+        <h1 id="hero-title" class="font-cinzel text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <span class="letter-animate" style="animation-delay: 0.3s;">H</span>
+          <span class="letter-animate" style="animation-delay: 0.35s;">a</span>
+          <span class="letter-animate" style="animation-delay: 0.4s;">r</span>
+          <span class="letter-animate" style="animation-delay: 0.45s;">i</span>
+          <span class="letter-animate" style="animation-delay: 0.5s;">s</span>
+          <span class="letter-animate mx-2" style="animation-delay: 0.6s;"></span>
+          <span class="letter-animate" style="animation-delay: 0.7s;">F</span>
+          <span class="letter-animate" style="animation-delay: 0.75s;">r</span>
+          <span class="letter-animate" style="animation-delay: 0.8s;">a</span>
+          <span class="letter-animate" style="animation-delay: 0.85s;">g</span>
+          <span class="letter-animate" style="animation-delay: 0.9s;">r</span>
+          <span class="letter-animate" style="animation-delay: 0.95s;">a</span>
+          <span class="letter-animate" style="animation-delay: 1s;">n</span>
+          <span class="letter-animate" style="animation-delay: 1.05s;">c</span>
+          <span class="letter-animate" style="animation-delay: 1.1s;">e</span>
+        </h1>
+        <p class="font-cormorant text-xl md:text-2xl text-brand-muted mb-8 opacity-0" style="animation: fadeUp 0.8s forwards; animation-delay: 0.6s;">
+          Where Eastern Elegance Meets Western Luxury
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0" style="animation: fadeUp 0.8s forwards; animation-delay: 0.9s;">
+          <a href="#products" class="px-8 py-3 bg-brand-gold text-brand-bg font-semibold rounded-full hover:bg-brand-gold-light transition-all hover:-translate-y-1 shimmer">
+            Explore Collection
+          </a>
+          <a href="#story" class="px-8 py-3 border-2 border-brand-gold text-brand-gold font-semibold rounded-full hover:bg-brand-gold hover:text-brand-bg transition-all hover:-translate-y-1">
+            Our Story
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bounce">
+        <div class="w-6 h-10 border-2 border-brand-gold-muted rounded-full flex justify-center pt-2">
+          <div class="w-1.5 h-3 bg-brand-gold rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section id="story" class="py-20 md:py-32 bg-brand-bg-secondary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="section-heading">
+            <p class="font-dancing text-brand-gold text-xl mb-3">Since 1985</p>
+            <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white mb-6">The Art of Fragrance</h2>
+            <p class="text-brand-muted text-lg leading-relaxed mb-6">
+              Born from a passion for sensory excellence, Haris Fragrance has been crafting exceptional perfumes that tell stories of luxury, heritage, and timeless elegance. Our journey began in the heart of Lahore, where traditional Attar-making met modern perfumery.
+            </p>
+            <p class="text-brand-muted text-lg leading-relaxed mb-8">
+              Today, we continue to blend the finest Eastern and Western ingredients, creating scents that linger in memory long after the bottle is empty.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="flex items-center gap-3">
+                <i class="ri-award-line text-3xl text-brand-gold"></i>
+                <div>
+                  <p class="font-semibold text-white">Premium Quality</p>
+                  <p class="text-brand-muted text-sm">ISO Certified</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="ri-leaf-line text-3xl text-brand-gold"></i>
+                <div>
+                  <p class="font-semibold text-white">100% Original</p>
+                  <p class="text-brand-muted text-sm">Authentic Scent</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-heading" style="transition-delay: 0.2s;">
+            <div class="gold-border-corner inline-block">
+              <img src="pavlo-talpa-x6uDzV1AHRI-unsplash.jpg" alt="Perfume Bottle Collection" class="w-full h-[400px] object-cover rounded-lg" onerror="this.src='https://placehold.co/400x400/211A13/C9A84C?text=Perfume+Collection'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Pillars Section -->
+    <section class="py-20 bg-brand-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 section-heading">
+          <p class="font-dancing text-brand-gold text-xl mb-3">Why Choose Us</p>
+          <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white">The Haris Promise</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-brand-card p-8 rounded-xl border-t-4 border-brand-gold card-lift section-heading">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mb-4">
+              <i class="ri-diamond-line text-3xl text-brand-gold"></i>
+            </div>
+            <h3 class="font-cormorant text-xl font-semibold text-white mb-3">Luxury Craftsmanship</h3>
+            <p class="text-brand-muted">Each bottle is a testament to meticulous attention to detail, crafted by master perfumers with decades of experience.</p>
+          </div>
+          <div class="bg-brand-card p-8 rounded-xl border-t-4 border-brand-gold card-lift section-heading" style="transition-delay: 0.1s;">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mb-4">
+              <i class="ri-plant-line text-3xl text-brand-gold"></i>
+            </div>
+            <h3 class="font-cormorant text-xl font-semibold text-white mb-3">Pure Ingredients</h3>
+            <p class="text-brand-muted">We source only the finest natural essences from around the world, ensuring authenticity in every spray.</p>
+          </div>
+          <div class="bg-brand-card p-8 rounded-xl border-t-4 border-brand-gold card-lift section-heading" style="transition-delay: 0.2s;">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mb-4">
+              <i class="ri-timer-flash-line text-3xl text-brand-gold"></i>
+            </div>
+            <h3 class="font-cormorant text-xl font-semibold text-white mb-3">Long-Lasting Sillage</h3>
+            <p class="text-brand-muted">Our formulations are designed to last 8+ hours, leaving a memorable impression wherever you go.</p>
+          </div>
+          <div class="bg-brand-card p-8 rounded-xl border-t-4 border-brand-gold card-lift section-heading" style="transition-delay: 0.3s;">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mb-4">
+              <i class="ri-plane-line text-3xl text-brand-gold"></i>
+            </div>
+            <h3 class="font-cormorant text-xl font-semibold text-white mb-3">Worldwide Shipping</h3>
+            <p class="text-brand-muted">From Lahore to the world - we deliver luxury to your doorstep, safely and discreetly across 50+ countries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Category Showcase -->
+    <section id="collections" class="py-20 bg-brand-bg-secondary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 section-heading">
+          <p class="font-dancing text-brand-gold text-xl mb-3">Our Range</p>
+          <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white">Browse Collections</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+          <button onclick="filterProducts('edp')" class="category-card group relative overflow-hidden rounded-xl aspect-square bg-brand-card border-2 border-transparent hover:border-[var(--cat-edp)] transition-all" style="--cat-color: #C9A84C;">
+            <img src="perfum01.jpg" alt="Eau de Parfum" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/300x300/C9A84C/0D0A07?text=EDP'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="font-cinzel text-lg font-semibold text-white">Eau de Parfum</p>
+              <p class="text-brand-muted text-sm">Luxury Blends</p>
+            </div>
+          </button>
+          <button onclick="filterProducts('attar')" class="category-card group relative overflow-hidden rounded-xl aspect-square bg-brand-card border-2 border-transparent hover:border-[var(--cat-attar)] transition-all" style="--cat-color: #8C6A3F;">
+            <img src="perfum02.jpg" alt="Attar & Oils" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/300x300/8C6A3F/0D0A07?text=Attar'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="font-cinzel text-lg font-semibold text-white">Attar & Oils</p>
+              <p class="text-brand-muted text-sm">Traditional</p>
+            </div>
+          </button>
+          <button onclick="filterProducts('oud')" class="category-card group relative overflow-hidden rounded-xl aspect-square bg-brand-card border-2 border-transparent hover:border-[var(--cat-oud)] transition-all" style="--cat-color: #5C3D2E;">
+            <img src="perfum03.jpg" alt="Oud Collection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/300x300/5C3D2E/0D0A07?text=Oud'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="font-cinzel text-lg font-semibold text-white">Oud Collection</p>
+              <p class="text-brand-muted text-sm">Royal Scents</p>
+            </div>
+          </button>
+          <button onclick="filterProducts('oriental')" class="category-card group relative overflow-hidden rounded-xl aspect-square bg-brand-card border-2 border-transparent hover:border-[var(--cat-oriental)] transition-all" style="--cat-color: #8C3A50;">
+            <img src="perfum04.jpg" alt="Oriental Blends" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/300x300/8C3A50/0D0A07?text=Oriental'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="font-cinzel text-lg font-semibold text-white">Oriental Blends</p>
+              <p class="text-brand-muted text-sm">Exotic Notes</p>
+            </div>
+          </button>
+          <button onclick="filterProducts('giftsets')" class="category-card group relative overflow-hidden rounded-xl aspect-square bg-brand-card border-2 border-transparent hover:border-[var(--cat-giftsets)] transition-all" style="--cat-color: #4A6741;">
+            <img src="perfum05.jpg" alt="Gift Sets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/300x300/4A6741/0D0A07?text=Gifts'">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-bg/90 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <p class="font-cinzel text-lg font-semibold text-white">Gift Sets</p>
+              <p class="text-brand-muted text-sm">Perfect Presents</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid with Filter Bar -->
+    <section id="products" class="py-20 bg-brand-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="font-dancing text-brand-gold text-xl mb-3">Premium Selection</p>
+          <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white mb-8">Our Collection</h2>
+
+          <!-- Filter Bar -->
+          <div class="flex flex-wrap justify-center gap-3">
+            <button onclick="filterProducts('all')" class="filter-btn active px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-all" data-filter="all">
+              All
+            </button>
+            <button onclick="filterProducts('edp')" class="filter-btn px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-[#C9A84C] hover:text-[#C9A84C] transition-all" data-filter="edp">
+              Eau de Parfum
+            </button>
+            <button onclick="filterProducts('attar')" class="filter-btn px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-[#8C6A3F] hover:text-[#8C6A3F] transition-all" data-filter="attar">
+              Attar / Oils
+            </button>
+            <button onclick="filterProducts('oud')" class="filter-btn px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-[#5C3D2E] hover:text-[#5C3D2E] transition-all" data-filter="oud">
+              Oud
+            </button>
+            <button onclick="filterProducts('oriental')" class="filter-btn px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-[#8C3A50] hover:text-[#8C3A50] transition-all" data-filter="oriental">
+              Oriental
+            </button>
+            <button onclick="filterProducts('giftsets')" class="filter-btn px-5 py-2.5 rounded-full border border-brand-gold-muted text-brand-muted hover:border-[#4A6741] hover:text-[#4A6741] transition-all" data-filter="giftsets">
+              Gift Sets
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Products will be rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers Showcase -->
+    <section id="bestsellers" class="py-20 bg-brand-bg-secondary">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 section-heading">
+          <p class="font-dancing text-brand-gold text-xl mb-3">Customer Favorites</p>
+          <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white">Bestsellers</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="product-card bg-brand-card rounded-2xl overflow-hidden shadow-lg section-heading">
+            <div class="relative overflow-hidden">
+              <img src="perfum06.jpeg" alt="Royal Oud Intense" class="w-full h-72 object-cover product-image" onerror="this.src='https://placehold.co/400x288/5C3D2E/C9A84C?text=Royal+Oud'">
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-bg text-sm font-semibold rounded-full">BEST SELLER</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1 mb-2">
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <span class="text-brand-muted text-sm ml-2">(328)</span>
+              </div>
+              <h3 class="font-cormorant text-xl font-semibold text-white mb-2">Royal Oud Intense</h3>
+              <p class="text-brand-muted text-sm mb-4">A majestic blend of rare agarwood, saffron, and precious spices.</p>
+              <div class="flex items-center justify-between">
+                <p class="font-cinzel text-2xl font-bold text-brand-gold">Rs. 12,500</p>
+                <button onclick="openProductModal(0)" class="px-4 py-2 bg-brand-gold text-brand-bg rounded-full text-sm font-semibold hover:bg-brand-gold-light transition-colors">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card bg-brand-card rounded-2xl overflow-hidden shadow-lg section-heading" style="transition-delay: 0.1s;">
+            <div class="relative overflow-hidden">
+              <img src="perfum07.jpeg" alt="Rose Elixir" class="w-full h-72 object-cover product-image" onerror="this.src='https://placehold.co/400x288/8C3A50/C9A84C?text=Rose+Elixir'">
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-bg text-sm font-semibold rounded-full">BEST SELLER</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1 mb-2">
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <span class="text-brand-muted text-sm ml-2">(256)</span>
+              </div>
+              <h3 class="font-cormorant text-xl font-semibold text-white mb-2">Rose Elixir</h3>
+              <p class="text-brand-muted text-sm mb-4">An enchanting rose bouquet with jasmine and sandalwood.</p>
+              <div class="flex items-center justify-between">
+                <p class="font-cinzel text-2xl font-bold text-brand-gold">Rs. 8,500</p>
+                <button onclick="openProductModal(1)" class="px-4 py-2 bg-brand-gold text-brand-bg rounded-full text-sm font-semibold hover:bg-brand-gold-light transition-colors">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card bg-brand-card rounded-2xl overflow-hidden shadow-lg section-heading" style="transition-delay: 0.2s;">
+            <div class="relative overflow-hidden">
+              <img src="perfum08.jpeg" alt="Black Musk Attar" class="w-full h-72 object-cover product-image" onerror="this.src='https://placehold.co/400x288/211A13/C9A84C?text=Black+Musk'">
+              <span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold text-brand-bg text-sm font-semibold rounded-full">BEST SELLER</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-1 mb-2">
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <i class="ri-star-fill star-filled"></i>
+                <span class="text-brand-muted text-sm ml-2">(412)</span>
+              </div>
+              <h3 class="font-cormorant text-xl font-semibold text-white mb-2">Black Musk Attar</h3>
+              <p class="text-brand-muted text-sm mb-4">Deep, sensual notes of musk with amber and vanilla base.</p>
+              <div class="flex items-center justify-between">
+                <p class="font-cinzel text-2xl font-bold text-brand-gold">Rs. 6,500</p>
+                <button onclick="openProductModal(2)" class="px-4 py-2 bg-brand-gold text-brand-bg rounded-full text-sm font-semibold hover:bg-brand-gold-light transition-colors">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section class="py-20 bg-brand-bg">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1 section-heading">
+            <div class="gold-border-corner inline-block">
+              <img src="pavlo-talpa-1Mhre9qvZeY-unsplash.jpg" alt="Luxury Perfume" class="w-full h-[400px] object-cover rounded-lg" onerror="this.src='https://placehold.co/400x400/211A13/C9A84C?text=Promise'">
+            </div>
+          </div>
+          <div class="order-1 md:order-2 section-heading">
+            <p class="font-dancing text-brand-gold text-xl mb-3">Our Commitment</p>
+            <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white mb-6">The Haris Guarantee</h2>
+            <p class="text-brand-muted text-lg mb-8">Every bottle of Haris Fragrance comes with our promise of authenticity, quality, and customer satisfaction.</p>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3">
+                <i class="ri-checkbox-circle-line text-2xl text-brand-gold"></i>
+                <span class="text-brand-cream">100% Authentic - Direct from our perfumery</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="ri-checkbox-circle-line text-2xl text-brand-gold"></i>
+                <span class="text-brand-cream">Free Shipping - On orders above Rs. 5,000</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="ri-checkbox-circle-line text-2xl text-brand-gold"></i>
+                <span class="text-brand-cream">Secure Packaging - Luxury unboxing experience</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="ri-checkbox-circle-line text-2xl text-brand-gold"></i>
+                <span class="text-brand-cream">Easy Returns - 7-day return policy</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter/WhatsApp Section -->
+    <section class="py-20 bg-brand-bg-secondary">
+      <div class="max-w-4xl mx-auto px-6 text-center section-heading">
+        <p class="font-dancing text-brand-gold text-xl mb-3">Stay Connected</p>
+        <h2 class="font-cinzel text-4xl md:text-5xl font-bold text-white mb-6">Join Our Community</h2>
+        <p class="text-brand-muted text-lg mb-8">Get exclusive offers, new arrivals, and fragrance tips delivered to your WhatsApp.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+          <input type="tel" placeholder="Enter your WhatsApp number" class="flex-1 px-6 py-3 bg-brand-card border border-brand-gold-muted rounded-full text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none">
+          <a href="https://wa.me/923001234567?text=I'm+interested+in+joining+the+Haris+Fragrance+community" target="_blank" class="px-8 py-3 bg-brand-gold text-brand-bg font-semibold rounded-full hover:bg-brand-gold-light transition-colors whitespace-nowrap">
+            <i class="ri-whatsapp-line mr-2"></i>Subscribe
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-brand-card">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <img src="logo.jpg" alt="Haris Fragrance" class="h-10 w-auto" onerror="this.src='https://placehold.co/40x40/C9A84C/0D0A07?text=HF'">
+              <span class="font-cinzel text-xl font-bold text-brand-gold">Haris Fragrance</span>
+            </div>
+            <p class="text-brand-muted mb-6">Crafting luxurious fragrances that tell stories of elegance, heritage, and timeless beauty since 1985.</p>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-bg transition-colors">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-bg transition-colors">
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold hover:bg-brand-gold hover:text-brand-bg transition-colors">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-cinzel text-lg font-semibold text-white mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-brand-muted hover:text-brand-gold transition-colors">Home</a></li>
+              <li><a href="#story" class="text-brand-muted hover:text-brand-gold transition-colors">Our Story</a></li>
+              <li><a href="#collections" class="text-brand-muted hover:text-brand-gold transition-colors">Collections</a></li>
+              <li><a href="#products" class="text-brand-muted hover:text-brand-gold transition-colors">Shop</a></li>
+              <li><a href="#bestsellers" class="text-brand-muted hover:text-brand-gold transition-colors">Bestsellers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-cinzel text-lg font-semibold text-white mb-6">Connect</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-brand-muted">
+                <i class="ri-map-pin-line text-brand-gold"></i>
+                <span>Lahore, Pakistan</span>
+              </li>
+              <li>
+                <a href="tel:+923001234567" class="flex items-center gap-3 text-brand-muted hover:text-brand-gold transition-colors">
+                  <i class="ri-phone-line text-brand-gold"></i>
+                  <span>+92 300 1234567</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@harisfragrance.com" class="flex items-center gap-3 text-brand-muted hover:text-brand-gold transition-colors">
+                  <i class="ri-mail-line text-brand-gold"></i>
+                  <span>info@harisfragrance.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/923001234567" target="_blank" class="flex items-center gap-3 text-brand-muted hover:text-brand-gold transition-colors">
+                  <i class="ri-whatsapp-line text-brand-gold"></i>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-brand-gold-muted/20 pt-8 text-center">
+          <p class="text-brand-muted">&copy; 2026 Haris Fragrance. All rights reserved. Crafted with love in Pakistan.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-float">
+      <i class="ri-whatsapp-line text-white text-2xl"></i>
+    </a>
+
+    <!-- Product Detail Modal (Screen 1) -->
+    <div id="product-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 hidden">
+      <div class="modal-content bg-brand-bg-secondary rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <!-- Screen 1: Product Details -->
+        <div id="modal-screen-1" class="screen-content active">
+          <div class="grid md:grid-cols-2">
+            <div class="relative">
+              <img id="modal-product-image" src="" alt="Product" class="w-full h-full min-h-[400px] object-cover" onerror="this.src='https://placehold.co/400x400/211A13/C9A84C?text=Product'">
+              <button onclick="closeProductModal()" class="absolute top-4 right-4 w-10 h-10 bg-brand-bg/80 rounded-full flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-bg transition-colors">
+                <i class="ri-close-line text-xl"></i>
+              </button>
+            </div>
+            <div class="p-8">
+              <span id="modal-product-badge" class="inline-block px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm rounded-full mb-4">New Arrival</span>
+              <h3 id="modal-product-name" class="font-cinzel text-2xl font-bold text-white mb-2">Product Name</h3>
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex items-center gap-1">
+                  <i class="ri-star-fill star-filled"></i>
+                  <i class="ri-star-fill star-filled"></i>
+                  <i class="ri-star-fill star-filled"></i>
+                  <i class="ri-star-fill star-filled"></i>
+                  <i class="ri-star-fill star-filled"></i>
+                </div>
+                <span id="modal-product-rating" class="text-brand-muted text-sm">(128 reviews)</span>
+              </div>
+              <p id="modal-product-description" class="text-brand-muted mb-6">Product description goes here.</p>
+
+              <!-- Volume Selector -->
+              <div class="mb-6">
+                <label class="text-brand-muted text-sm mb-2 block">Select Volume</label>
+                <div class="flex gap-3">
+                  <button onclick="selectVolume('30ml')" class="volume-btn px-4 py-2 border border-brand-gold-muted rounded-full text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-colors" data-volume="30ml">30ml</button>
+                  <button onclick="selectVolume('50ml')" class="volume-btn px-4 py-2 border border-brand-gold-muted rounded-full text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-colors" data-volume="50ml">50ml</button>
+                  <button onclick="selectVolume('100ml')" class="volume-btn px-4 py-2 border border-brand-gold-muted rounded-full text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-colors" data-volume="100ml">100ml</button>
+                </div>
+              </div>
+
+              <!-- Quantity Selector -->
+              <div class="mb-6">
+                <label class="text-brand-muted text-sm mb-2 block">Quantity</label>
+                <div class="flex items-center gap-4">
+                  <button onclick="updateQuantity(-1)" class="qty-btn">-</button>
+                  <span id="modal-quantity" class="text-white text-xl font-semibold w-12 text-center">1</span>
+                  <button onclick="updateQuantity(1)" class="qty-btn">+</button>
+                </div>
+              </div>
+
+              <!-- Notes Tabs -->
+              <div class="mb-6">
+                <div class="flex gap-2 mb-3">
+                  <button onclick="showNotes('top')" class="notes-tab px-3 py-1 text-sm text-brand-muted hover:text-brand-gold transition-colors active" data-notes="top">Top Notes</button>
+                  <button onclick="showNotes('middle')" class="notes-tab px-3 py-1 text-sm text-brand-muted hover:text-brand-gold transition-colors" data-notes="middle">Middle Notes</button>
+                  <button onclick="showNotes('base')" class="notes-tab px-3 py-1 text-sm text-brand-muted hover:text-brand-gold transition-colors" data-notes="base">Base Notes</button>
+                </div>
+                <div id="notes-content" class="text-brand-muted text-sm bg-brand-card p-4 rounded-lg">
+                  <p id="notes-text">Bergamot, Lemon, Fresh Notes</p>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="flex items-center justify-between border-t border-brand-gold-muted/20 pt-6">
+                <div>
+                  <p class="text-brand-muted text-sm">Total</p>
+                  <p id="modal-product-price" class="font-cinzel text-3xl font-bold text-brand-gold">Rs. 0</p>
+                </div>
+                <button onclick="openCheckout()" class="px-8 py-3 bg-brand-gold text-brand-bg font-semibold rounded-full hover:bg-brand-gold-light transition-colors">
+                  Proceed to Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen 2: Checkout Form -->
+        <div id="modal-screen-2" class="screen-content p-8">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="font-cinzel text-2xl font-bold text-white">Checkout</h3>
+            <button onclick="backToProduct()" class="text-brand-muted hover:text-brand-gold transition-colors">
+              <i class="ri-arrow-left-line mr-2"></i>Back
+            </button>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="bg-brand-card rounded-xl p-6 mb-8">
+            <h4 class="font-semibold text-white mb-4">Order Summary</h4>
+            <div id="checkout-summary" class="space-y-3">
+              <!-- Will be populated by JS -->
+            </div>
+            <div class="border-t border-brand-gold-muted/20 mt-4 pt-4 flex justify-between">
+              <span class="text-brand-muted">Total</span>
+              <span id="checkout-total" class="font-cinzel text-xl font-bold text-brand-gold">Rs. 0</span>
+            </div>
+          </div>
+
+          <!-- Customer Form -->
+          <form id="checkout-form" class="space-y-4">
+            <div>
+              <label class="text-brand-muted text-sm mb-2 block">Full Name *</label>
+              <input type="text" id="checkout-name" required class="w-full px-4 py-3 bg-brand-card border border-brand-gold-muted rounded-lg text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none" placeholder="Enter your name">
+            </div>
+            <div>
+              <label class="text-brand-muted text-sm mb-2 block">Phone Number *</label>
+              <input type="tel" id="checkout-phone" required class="w-full px-4 py-3 bg-brand-card border border-brand-gold-muted rounded-lg text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none" placeholder="+92 300 1234567">
+            </div>
+            <div>
+              <label class="text-brand-muted text-sm mb-2 block">City *</label>
+              <input type="text" id="checkout-city" required class="w-full px-4 py-3 bg-brand-card border border-brand-gold-muted rounded-lg text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none" placeholder="Lahore">
+            </div>
+            <div>
+              <label class="text-brand-muted text-sm mb-2 block">Delivery Address *</label>
+              <textarea id="checkout-address" required rows="3" class="w-full px-4 py-3 bg-brand-card border border-brand-gold-muted rounded-lg text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none" placeholder="Enter your full address"></textarea>
+            </div>
+            <div>
+              <label class="text-brand-muted text-sm mb-2 block">Order Notes (Optional)</label>
+              <textarea id="checkout-notes" rows="2" class="w-full px-4 py-3 bg-brand-card border border-brand-gold-muted rounded-lg text-brand-cream placeholder-brand-muted focus:border-brand-gold focus:outline-none" placeholder="Any special instructions?"></textarea>
+            </div>
+            <button type="submit" onclick="sendToWhatsApp(event)" class="w-full px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
+              <i class="ri-whatsapp-line text-xl"></i>
+              Send Order via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Product Data
+      const products = [
+        { id: 0, name: "Royal Oud Intense", category: "oud", price: 12500, image: "perfum06.jpeg", rating: 328, description: "A majestic blend of rare agarwood, saffron, and precious spices.", badge: "Best Seller", notes: { top: "Saffron, Bergamot, Pink Pepper", middle: "Rose, Jasmine, Oud", base: "Amber, Sandalwood, Musk" } },
+        { id: 1, name: "Rose Elixir", category: "oriental", price: 8500, image: "perfum07.jpeg", rating: 256, description: "An enchanting rose bouquet with jasmine and sandalwood.", badge: "Popular", notes: { top: "Rose, Lemon, Peach", middle: "Jasmine, Ylang-Ylang", base: "Sandalwood, Vanilla, Musk" } },
+        { id: 2, name: "Black Musk Attar", category: "attar", price: 6500, image: "perfum08.jpeg", rating: 412, description: "Deep, sensual notes of musk with amber and vanilla base.", badge: "Favorite", notes: { top: "Bergamot, Black Pepper", middle: "Musk, Jasmine", base: "Amber, Vanilla, Patchouli" } },
+        { id: 3, name: "Amber Gold EDP", category: "edp", price: 9500, image: "perfum09.jpeg", rating: 189, description: "Luxurious amber with warm vanilla and woody notes.", badge: "New", notes: { top: "Amber, Orange Blossom", middle: "Vanilla, Jasmine", base: "Sandalwood, Musk" } },
+        { id: 4, name: "Mystic Oud", category: "oud", price: 15000, image: "perfum01.jpg", rating: 234, description: "A mysterious blend of aged oud with exotic spices.", badge: "Premium", notes: { top: "Cardamom, Cinnamon", middle: "Oud, Rose", base: "Patchouli, Leather" } },
+        { id: 5, name: "Silver Rose", category: "edp", price: 7500, image: "perfum02.jpg", rating: 167, description: "Delicate rose with sparkling citrus and musky base.", badge: "New", notes: { top: "Grapefruit, Raspberry", middle: "Rose, Iris", base: "Musk, Amber" } },
+        { id: 6, name: "Traditional Attar", category: "attar", price: 4500, image: "perfum03.jpg", rating: 289, description: "Classic attar with pure rose and sandalwood.", badge: "Traditional", notes: { top: "Rose", middle: "Sandalwood", base: "Musk" } },
+        { id: 7, name: "Evening Amber", category: "oriental", price: 11000, image: "perfum04.jpg", rating: 145, description: "Rich amber with warm spices for evening wear.", badge: "Evening", notes: { top: "Cinnamon, Nutmeg", middle: "Amber, Vanilla", base: "Patchouli, Musk" } },
+        { id: 8, name: "Royal Gift Set", category: "giftsets", price: 25000, image: "perfum05.jpg", rating: 98, description: "Luxury gift set with 3 premium fragrances.", badge: "Gift", notes: { top: "Various", middle: "Various", base: "Various" } },
+        { id: 9, name: "Fresh Citrus EDP", category: "edp", price: 5500, image: "perfum06.jpeg", rating: 312, description: "Energizing citrus blend for everyday use.", badge: "Fresh", notes: { top: "Lemon, Lime, Bergamot", middle: "Jasmine, Green Tea", base: "Musk, Sandalwood" } },
+        { id: 10, name: "Oud Al Hind", category: "oud", price: 18000, image: "perfum07.jpeg", rating: 178, description: "Rare Indian oud with exceptional depth.", badge: "Rare", notes: { top: "Spices, Resins", middle: "Aged Oud", base: "Woody Notes" } },
+        { id: 11, name: "Floral Attar", category: "attar", price: 5500, image: "perfum08.jpeg", rating: 201, description: "Pure floral attar with jasmine and mogra.", badge: "Pure", notes: { top: "Jasmine", middle: "Mogra, Rose", base: "Sandalwood" } },
+        { id: 12, name: "Spice Market", category: "oriental", price: 8900, image: "perfum09.jpeg", rating: 156, description: "Exotic spices with warm vanilla undertones.", badge: "Exotic", notes: { top: "Cinnamon, Cardamom", middle: "Clove, Nutmeg", base: "Vanilla, Amber" } },
+        { id: 13, name: "Couple Gift Set", category: "giftsets", price: 18000, image: "perfum10.jpg", rating: 87, description: "Elegant set for him and her.", badge: "Couple", notes: { top: "Various", middle: "Various", base: "Various" } },
+        { id: 14, name: "Midnight Oud", category: "oud", price: 13500, image: "perfum11.jpeg", rating: 223, description: "Dark and intense oud for night occasions.", badge: "Midnight", notes: { top: "Black Pepper, Saffron", middle: "Oud, Rose", base: "Leather, Musk" } },
+        { id: 15, name: "Citrus Blossom", category: "edp", price: 6500, image: "perfum01.jpg", rating: 189, description: "Fresh citrus with delicate floral heart.", badge: "Spring", notes: { top: "Orange, Lemon", middle: "Orange Blossom, Jasmine", base: "Musk, White Wood" } },
+        { id: 16, name: "Sandalwood Special", category: "attar", price: 7500, image: "perfum02.jpg", rating: 267, description: "Pure Indian sandalwood attar.", badge: "Special", notes: { top: "Sandalwood", middle: "Sandalwood", base: "Sandalwood" } },
+        { id: 17, name: "Luxury Collection Box", category: "giftsets", price: 35000, image: "perfum03.jpg", rating: 45, description: "Ultimate luxury box with 5 premium scents.", badge: "Ultimate", notes: { top: "Various", middle: "Various", base: "Various" } }
+      ];
+
+      // State
+      let selectedCategory = 'all';
+      let selectedProduct = null;
+      let selectedVolume = '30ml';
+      let quantity = 1;
+      let volumePrices = {};
+
+      // Product Prices by Volume
+      function getVolumePrices(basePrice) {
+        return {
+          '30ml': basePrice,
+          '50ml': basePrice * 1.5,
+          '100ml': basePrice * 2.5
+        };
+      }
+
+      // Render Products
+      function renderProducts(category) {
+        const grid = document.getElementById('product-grid');
+        const filteredProducts = category === 'all'
+          ? products
+          : products.filter(p => p.category === category);
+
+        grid.innerHTML = filteredProducts.map((product, index) => {
+          return `
+            <div class="product-card bg-brand-card rounded-xl overflow-hidden shadow-lg fade-in" style="animation-delay: ${index * 50}ms;" data-product-id="${product.id}">
+              <div class="relative overflow-hidden">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-56 object-cover product-image" onerror="this.src='https://placehold.co/400x224/211A13/C9A84C?text=${product.name.replace(/ /g, '+')}'">
+                ${product.badge ? `<span class="absolute top-4 left-4 px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm font-semibold rounded-full">${product.badge}</span>` : ''}
+              </div>
+              <div class="p-5">
+                <div class="flex items-center gap-1 mb-2">
+                  ${Array(5).fill('<i class="ri-star-fill star-filled"></i>').join('')}
+                  <span class="text-brand-muted text-sm ml-2">(${product.rating})</span>
+                </div>
+                <h3 class="font-cormorant text-lg font-semibold text-white mb-2">${product.name}</h3>
+                <p class="text-brand-muted text-sm mb-4 line-clamp-2">${product.description}</p>
+                <div class="flex items-center justify-between">
+                  <p class="font-cinzel text-xl font-bold text-brand-gold">Rs. ${product.price.toLocaleString()}</p>
+                  <button onclick="openProductModal(${product.id})" class="px-4 py-2 bg-brand-gold text-brand-bg rounded-full text-sm font-semibold hover:bg-brand-gold-light transition-colors">
+                    View
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Filter Products
+      function filterProducts(category) {
+        selectedCategory = category;
+
+        // Update filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.dataset.filter === category) {
+            btn.classList.add('active');
+          }
+        });
+
+        // Animate and render
+        renderProducts(category);
+      }
+
+      // Open Product Modal
+      function openProductModal(productId) {
+        selectedProduct = products.find(p => p.id === productId);
+        volumePrices = getVolumePrices(selectedProduct.price);
+        selectedVolume = '30ml';
+        quantity = 1;
+
+        document.getElementById('modal-product-image').src = selectedProduct.image;
+        document.getElementById('modal-product-image').onerror = function() {
+          this.src = 'https://placehold.co/400x400/211A13/C9A84C?text=' + selectedProduct.name.replace(/ /g, '+');
+        };
+        document.getElementById('modal-product-badge').textContent = selectedProduct.badge || 'New Arrival';
+        document.getElementById('modal-product-name').textContent = selectedProduct.name;
+        document.getElementById('modal-product-rating').textContent = `(${selectedProduct.rating} reviews)`;
+        document.getElementById('modal-product-description').textContent = selectedProduct.description;
+
+        updateModalPrice();
+        document.getElementById('product-modal').classList.remove('hidden');
+        document.getElementById('product-modal').classList.add('active');
+
+        // Reset volume selection
+        document.querySelectorAll('.volume-btn').forEach(btn => {
+          btn.classList.remove('bg-brand-gold', 'text-brand-bg', 'border-brand-gold');
+          btn.classList.add('border-brand-gold-muted', 'text-brand-muted');
+          if (btn.dataset.volume === '30ml') {
+            btn.classList.add('bg-brand-gold', 'text-brand-bg', 'border-brand-gold');
+            btn.classList.remove('border-brand-gold-muted', 'text-brand-muted');
+          }
+        });
+
+        // Show top notes by default
+        showNotes('top');
+      }
+
+      // Close Product Modal
+      function closeProductModal() {
+        document.getElementById('product-modal').classList.add('hidden');
+        document.getElementById('product-modal').classList.remove('active');
+        document.getElementById('modal-screen-1').classList.add('active');
+        document.getElementById('modal-screen-2').classList.remove('active');
+      }
+
+      // Select Volume
+      function selectVolume(volume) {
+        selectedVolume = volume;
+        document.querySelectorAll('.volume-btn').forEach(btn => {
+          btn.classList.remove('bg-brand-gold', 'text-brand-bg', 'border-brand-gold');
+          btn.classList.add('border-brand-gold-muted', 'text-brand-muted');
+          if (btn.dataset.volume === volume) {
+            btn.classList.add('bg-brand-gold', 'text-brand-bg', 'border-brand-gold');
+            btn.classList.remove('border-brand-gold-muted', 'text-brand-muted');
+          }
+        });
+        updateModalPrice();
+      }
+
+      // Update Quantity
+      function updateQuantity(delta) {
+        quantity = Math.max(1, quantity + delta);
+        document.getElementById('modal-quantity').textContent = quantity;
+        updateModalPrice();
+      }
+
+      // Update Modal Price
+      function updateModalPrice() {
+        const price = volumePrices[selectedVolume] * quantity;
+        document.getElementById('modal-product-price').textContent = `Rs. ${price.toLocaleString()}`;
+      }
+
+      // Show Notes
+      function showNotes(type) {
+        document.querySelectorAll('.notes-tab').forEach(tab => {
+          tab.classList.remove('text-brand-gold');
+          tab.classList.add('text-brand-muted');
+          if (tab.dataset.notes === type) {
+            tab.classList.add('text-brand-gold');
+            tab.classList.remove('text-brand-muted');
+          }
+        });
+
+        if (selectedProduct && selectedProduct.notes) {
+          document.getElementById('notes-text').textContent = selectedProduct.notes[type];
+        }
+      }
+
+      // Open Checkout
+      function openCheckout() {
+        document.getElementById('modal-screen-1').classList.remove('active');
+        document.getElementById('modal-screen-2').classList.add('active');
+
+        const price = volumePrices[selectedVolume] * quantity;
+        document.getElementById('checkout-summary').innerHTML = `
+          <div class="flex justify-between">
+            <span class="text-brand-cream">${selectedProduct.name}</span>
+            <span class="text-brand-cream">Rs. ${(volumePrices[selectedVolume]).toLocaleString()}</span>
+          </div>
+          <div class="flex justify-between text-brand-muted text-sm">
+            <span>Volume: ${selectedVolume} × ${quantity}</span>
+          </div>
+        `;
+        document.getElementById('checkout-total').textContent = `Rs. ${price.toLocaleString()}`;
+      }
+
+      // Back to Product
+      function backToProduct() {
+        document.getElementById('modal-screen-2').classList.remove('active');
+        document.getElementById('modal-screen-1').classList.add('active');
+      }
+
+      // Send to WhatsApp
+      function sendToWhatsApp(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('checkout-name').value;
+        const phone = document.getElementById('checkout-phone').value;
+        const city = document.getElementById('checkout-city').value;
+        const address = document.getElementById('checkout-address').value;
+        const notes = document.getElementById('checkout-notes').value;
+
+        const price = volumePrices[selectedVolume] * quantity;
+
+        const message = `*New Order from Haris Fragrance*\n\n` +
+          `*Product:* ${selectedProduct.name}\n` +
+          `*Volume:* ${selectedVolume}\n` +
+          `*Quantity:* ${quantity}\n` +
+          `*Total Price:* Rs. ${price.toLocaleString()}\n\n` +
+          `*Customer Details:*\n` +
+          `Name: ${name}\n` +
+          `Phone: ${phone}\n` +
+          `City: ${city}\n` +
+          `Address: ${address}\n` +
+          `Notes: ${notes || 'None'}`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/923001234567?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+      }
+
+      // Navbar Scroll Effect
+      window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 80) {
+          navbar.classList.add('glass');
+          navbar.classList.remove('bg-transparent');
+        } else {
+          navbar.classList.remove('glass');
+          navbar.classList.add('bg-transparent');
+        }
+      });
+
+      // Mobile Menu
+      document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('active');
+      });
+
+      document.getElementById('mobile-menu-close').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.remove('active');
+      });
+
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('mobile-menu').classList.remove('active');
+        });
+      });
+
+      // Scroll Animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.section-heading').forEach(el => observer.observe(el));
+
+      // Initialize
+      document.addEventListener('DOMContentLoaded', () => {
+        // Set navbar initial state
+        document.getElementById('navbar').classList.add('bg-transparent');
+
+        // Render all products
+        filterProducts('all');
+      });
+    </script>
+  </body>
+</html>
