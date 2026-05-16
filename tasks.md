@@ -1,0 +1,1 @@
+[USER ACTION REQUIRED: Upload all assets listed in Haris_Fragrance_Website_Prompt.md (63 image files) to D:\haris_fringance directory]
